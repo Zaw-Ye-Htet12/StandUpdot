@@ -1,0 +1,1502 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* For home section  */
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  } 
+  
+  .navbar {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+  }
+  
+  .dropdown-menu {
+    display: none; /* Hide dropdown menu by default */
+    position: absolute;
+    top: 100%; /* Position below the parent link */
+    left: 12%;
+    padding: 20px ;
+    border-radius: 5px;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.4px);
+    -webkit-backdrop-filter: blur(3.4px);
+    border: 1px solid rgba(255, 255, 255, 0.43);
+  }
+  
+  .dropdown-menu li{
+    list-style: none;
+  }
+  
+  .dropdown-menu li a{
+    text-decoration: none;
+  }
+  
+  
+  .logo {
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    color: white;
+  }
+  
+  .logo a{
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+  }
+  
+  .nav-links li {
+    margin-right: 30px;
+  }
+  
+  .nav-links li a {
+    color: white;
+    font-family: "Poppins";
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease; /* Separate transitions with comma */
+  }
+  
+  .nav-links li a:hover {
+    color: rgb(217, 186, 145);
+    transform: translateY(-5px);
+  }
+  
+  .content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .content {
+    height: 100vh;
+  }
+  
+  .home{
+      position: relative;
+      background-color: #030305;
+  }
+  
+  .mask{
+      width: 100%;
+      height: 100vh;
+      opacity: 0.5;
+      background-color: black;
+      position: absolute;
+  }
+
+  #myVideo{
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .container {
+    position: absolute;
+    top: -100px; /* Initially place the container above the viewport */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+    animation: dropAnimation 1.5s ease forwards; /* Apply animation */
+  }
+  
+  .back_to_top {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(212, 150, 103, 0.253);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+    z-index: 1000;
+  }
+  
+  .svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .back_to_top:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: burlywood;
+    align-items: center;
+  }
+  
+  .back_to_top:hover .svgIcon {
+    /* width: 20px; */
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+  }
+  
+  .back_to_top::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Back to Top";
+    color: white;
+    /* transition-duration: .3s; */
+    font-size: 0px;
+  }
+  
+  .back_to_top:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
+  }
+  
+  .show-back-to-top {
+    display: flex;
+  }
+  
+  @keyframes dropAnimation {
+    0% {
+        top: -100px; /* Start position */
+        opacity: 0; /* Initially invisible */
+    }
+    100% {
+        top: 35%; /* End position */
+        opacity: 1; /* Visible */
+    }
+  }
+  
+  .container_h3{
+      color: white;
+      font-size: 80px;
+      font-family: "Poppins", serif;
+  }
+  
+  .container h2{
+      color: white;
+      font-size: 50px;
+      font-family: "Poppins", sans-serif;
+  }
+  
+  .see_btn{
+      text-decoration: none;
+      background-color: burlywood;
+      color: white;
+      padding: 15px 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 17px;
+      border-radius: .3em;
+      border: none;
+      cursor: pointer;
+      font-weight: 400;
+  }
+  
+  .btn_container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px 0px;
+    width: 25%;
+    margin: 0 auto;
+    align-items: center;
+  }
+  
+  .contact_btn {
+    --color: burlywood;
+    padding: 0.8em 1.7em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    font-family: 'Poppins',sans-serif;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+   }
+   
+   .contact_btn::before, .contact_btn::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+   }
+   
+   .contact_btn::before {
+    top: -2em;
+    left: -2em;
+   }
+   
+   .contact_btn::after {
+    left: calc(100% + 2em);
+    top: calc(100% + 2em);
+   }
+   
+   .contact_btn:hover::before, .contact_btn:hover::after {
+    height: 410px;
+    width: 410px;
+   }
+   
+   .contact_btn:hover {
+    color: white;
+   }
+   
+   .contact_btn:active {
+    filter: brightness(.8);
+   }
+  
+  .menubar{
+    display: none;
+  }
+  
+  .modal_menu{
+    background: rgba(255, 255, 255, 0.17);
+    border-radius: 5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.8px);
+    -webkit-backdrop-filter: blur(6.8px);
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    padding: 20px;
+    position: absolute;
+    left: 15%;
+    right: 15%;
+    top: 0;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-100%);
+  }
+  
+  .modal_menu.show {
+    transform: translateY(40%);
+  }
+  
+  .modal_links{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .modal_links li{
+    list-style: none;
+  }
+  
+  .modal_links li a{
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+  }
+  
+  .modal_links li a:hover{
+    color: black;
+  }
+
+
+  /* For footer section  */
+  footer{
+    text-align: center;
+    padding: 40px 0px;
+    background-color: #2a3c4d;
+  }
+  
+  .footer_logo a{
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  }
+  
+  .footer_content{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+  }
+  
+  .footer_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    margin: 30px auto;
+    list-style: none;
+  }
+  
+  .footer_nav li a {
+    color: white;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease ;/* Separate transitions with comma */
+  }
+  
+  .footer_nav li a:hover {
+    color:black;
+  }
+  
+  .footer_social_media{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin: 20px auto;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .footer_social_media img{
+    cursor: pointer;
+  }
+  
+  footer p{
+    font-family: "Prompt", sans-serif;
+    font-size: 14px;
+    color: gray;
+  }
+
+  #benefit_sec{
+    height: 100vh;
+    padding-top: 30px;
+  }
+
+  .benefit_sec_h1{
+    text-align: center;
+    font-size: 50px;
+    font-family: "Poppins";
+    font-weight: bold;
+    color: #2a3c4d;
+  }
+
+  .center_div{
+    padding: 0px 30px;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .icon_card_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .icon_card{
+    text-align: center;
+    padding:40px 30px;
+    width: 250px;
+    border-radius: 7px;
+    background: #e0e0e0;
+  }
+
+  .icon_card img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+
+
+  .description h3{
+    color: burlywood;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+  }
+
+  .description p{
+    font-size: 13px;
+    opacity: .7;
+    color: black;
+    font-family: "Poppins", serif;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  #why_choose_sec{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .why_choose_container{
+    padding: 0 100px;
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .left_container{
+    width: 30%;
+    height: 100%;
+  }
+
+  .left_container img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .right_container{
+    width: 70%;
+  }
+
+  .right_container{
+    text-align: left;
+    padding: 0 60px;
+  }
+
+  .right_container_h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  .reason_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .reason{
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .reason h6{
+    background-color: #2a3c4d;
+    padding: 8px 13px;
+    color: white;
+    font-family: "Prompt", serif;
+    border-radius: 100%;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .reason h3{
+    font-family: "Poppins", serif;
+    font-weight: bold;
+  }
+
+  .reason p{
+    font-family: sans-serif;
+    font-weight:400;
+    letter-spacing: 1px;
+    opacity: 0.6;
+  }
+
+
+  .status_container{
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 15px;
+    background-color: #2a3c4d;
+    color: white;
+    text-align: center;
+    padding: 70px 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .status{
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+  }
+
+  .status p{
+    font-size: 16px;
+  }
+
+  .testimonial{
+    padding: 40px 0px;
+  }
+
+  .testimonial h2{
+    font-family: "Poppins", sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .testimonial h5{
+    font-family: "Poppins";
+    font-size: 16px;
+    color: #2a3c4d;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .profile_card_container{
+    width: 80%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 100px 0px;
+  }
+
+  .profile_card{
+    width: 400px;
+    height: auto;
+    padding: 20px 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .profile_img_container{
+    width: 220px;
+    height: 220px;
+    border-radius: 100%;
+    background-color: #2a3c4d;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .profile_img_container img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    object-fit: cover;
+  }
+
+  .profile_card h3{
+    color: #2a3c4d;
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .profile_card p{
+    font-size: 16px;
+    font-family: "Prompt", sans-serif;
+    color: #2a3c4d;
+    opacity: 0.6;
+  }
+
+  @media (max-width: 500px) {
+    /* Styles for extra small devices in portrait orientation */
+  
+    /* For home section */
+    .nav-links{
+      display: none;
+    }
+  
+    .navbar{
+      padding: 20px 20px;
+    }
+  
+    .menubar{
+      display: block;
+      color: white;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      background-color: transparent;
+    }
+  
+    .see_btn{
+      font-size: 10px;
+      font-weight: 200;
+    }
+  
+    .contact_btn{
+      font-size: 10px;
+      font-weight: 200;
+    }
+  
+    .btn_container{
+      width: 90%;
+    }
+  
+    .logo{
+      font-size: 20px;
+    }
+  
+    .container_h3{
+      font-size: 30px;
+    }
+  
+    .container h2{
+      font-size: 15px;
+    }
+
+  /* For benefits section  */
+
+  #benefit_sec{
+    height: auto;
+  }
+
+  .benefit_sec_h1{
+    font-size: 25px;
+  }
+
+  .center_div{
+    padding: 30px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .icon_card_container{
+    display: inline-block;
+    margin-top: 0;
+  }
+
+  .icon_card{
+    /* display: none; */
+    padding: 30px;
+    margin: 13px 0px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 8px 0px black;
+  }
+
+  .icon_card img{
+    width: 65px;
+    height: 65px;
+  }
+
+  .description h3{
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .description p{
+    font-size: 13px;
+  }
+
+  #why_choose_sec{
+    height: auto;
+  }
+
+  .why_choose_container{
+    display: inline-block;
+    padding: 0px;
+    width: 100%;
+  }
+
+  .left_container{
+    width: auto;
+    height: 350px;
+    padding: 0px 20px;
+  }
+
+  .left_container img{
+    border-radius: 0px;
+    height: 100%;
+  }
+
+  .right_container{
+    /* display: none; */
+    width: 100%;
+    padding: 20px;
+  }
+
+  .right_container_h1{
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .reason_container{
+    display: inline-block;
+    padding: 0px;
+    margin-top: 0px;
+  }
+
+  .reason{
+    padding: 20px 15px;
+    margin-top: 15px;
+    border-radius: 7px;
+    box-shadow: 1px 1px 8px 0px black;
+  }
+
+  .reason h3{
+    font-size: 18px;
+  }
+
+  .reason p{
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 0px;
+  }
+
+  .status_div{
+    padding: 0px 50px;
+  }
+
+  .status_container{
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #2a3c4d;
+    color: white;
+    padding: 0px 0px;
+    display: inline-block;
+    /* justify-content: space-around;
+    align-items: center; */
+  }
+
+  .status{
+    font-size: 17px;
+    margin: 25px 0px;
+  }
+
+  .status p{
+    font-size: 13px;
+  }
+
+  .testimonial h2{
+    font-size: 35px;
+  }
+
+  .testimonial h5{
+    font-size: 10px;
+  }
+
+  .profile_card_container{
+    display: inline-block;
+    padding: 0px;
+    width: 100%;
+  }
+
+  .profile_card{
+    width: 100%;
+  }
+
+  .profile_img_container{
+    width: 200px;
+    height: 200px;
+  }
+
+  .profile_img_container img{
+    width: 180px;
+    height: 180px;
+  }
+
+
+      /* For footer section  */
+  footer{
+    padding: 18px 20px;
+  }
+
+  .footer_logo a{
+    font-size: 30px;
+  }
+
+  .footer_content{
+    font-size: 7px;
+  }
+
+  .footer_nav{
+    display: inline;
+  }
+
+  .footer_nav li{
+    margin-top: 10px;
+  }
+
+  .footer_nav li a{
+    font-size: 13px;
+  }
+
+  .footer_social_media{
+    margin: 20px auto;
+    justify-content: space-around;
+    width: 250px;
+  }
+
+  .footer_social_media li img{
+    transform: scale(0.7);
+  }
+
+  footer p{
+    font-size: 12px;
+  }
+
+}
+
+@media (max-width: 700px) and (min-width: 500px) {
+    /* For home section */
+    .nav-links{
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .nav-links li{
+      margin-left: 0px;
+      margin-right: 20px;
+    }
+  
+    .nav-links li a{
+      font-size: 11px;
+    }
+  
+    .navbar{
+      padding: 20px 15px;
+    }
+  
+    .menubar{
+      display: none;
+    }
+  
+    .modal_menu{
+      display: none;
+    }
+  
+    .see_btn{
+      font-size: 13px;
+      font-weight: 250;
+      padding: 8px 20px;
+    }
+  
+    .contact_btn{
+      font-size: 13px;
+      font-weight: 250;
+      padding: 8px 20px;
+    }
+  
+    .btn_container{
+      width: 70%;
+    }
+  
+    .logo{
+      font-size: 20px;
+    }
+  
+    .container_h3{
+      font-size: 30px;
+    }
+  
+    .container h2{
+      font-size: 20px;
+    }
+
+    /* For benefits section  */
+
+    #benefit_sec{
+      height: auto;
+    }
+  
+    .benefit_sec_h1{
+      font-size: 30px;
+    }
+  
+    .center_div{
+      padding: 30px 0;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .icon_card_container{
+      display: inline-block;
+      margin: 10px 20px;
+    }
+  
+    .icon_card{
+      /* display: none; */
+      padding: 30px;
+      margin: 20px 0px;
+      box-sizing: border-box;
+      box-shadow: 1px 1px 8px 0px black;
+    }
+  
+    .icon_card img{
+      width: 65px;
+      height: 65px;
+    }
+  
+    .description h3{
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  
+    .description p{
+      font-size: 13px;
+    }
+  
+    #why_choose_sec{
+      height: auto;
+    }
+  
+    .why_choose_container{
+      display: inline-block;
+      padding: 0px;
+      width: 100%;
+    }
+  
+    .left_container{
+      width: auto;
+      height: 350px;
+      padding: 0px 20px;
+    }
+  
+    .left_container img{
+      border-radius: 0px;
+      height: 100%;
+    }
+  
+    .right_container{
+      /* display: none; */
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .right_container_h1{
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  
+    .reason_container{
+      /* display: inline-block; */
+      padding: 0px;
+      margin-top: 0px;
+    }
+  
+    .reason{
+      padding: 20px 15px;
+      border-radius: 7px;
+      border: 2px solid black;
+    }
+  
+    .reason h3{
+      font-size: 18px;
+    }
+  
+    .reason p{
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 0px;
+    }
+  
+    .status_div{
+      padding: 0px 30px;
+    }
+  
+    .status_container{
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 5px;
+      background-color: #2a3c4d;
+      color: white;
+      padding: 10px 20px;
+      /* justify-content: space-around;
+      align-items: center; */
+    }
+  
+    .status{
+      font-size: 16px;
+      margin: 25px 0px;
+    }
+  
+    .status p{
+      font-size: 13px;
+    }
+  
+    .testimonial h2{
+      font-size: 35px;
+    }
+  
+    .testimonial h5{
+      font-size: 10px;
+    }
+  
+    .profile_card_container{
+      display: inline-block;
+      padding: 0px;
+      width: 100%;
+    }
+  
+    .profile_card{
+      width: 100%;
+    }
+  
+    .profile_img_container{
+      width: 200px;
+      height: 200px;
+    }
+  
+    .profile_img_container img{
+      width: 180px;
+      height: 180px;
+    }
+
+
+      /* For footer section  */
+  footer{
+    padding: 20px 10px;
+  }
+
+  .footer_logo a{
+    font-size: 35px;
+  }
+
+  .footer_content{
+    font-size: 9px;
+  }
+
+  .footer_nav{
+    width: 400px;
+  }
+
+  .footer_nav li a{
+    font-size: 12px;
+  }
+
+  .footer_social_media{
+    width: 200px;
+  }
+
+  .footer_social_media li img{
+    transform: scale(0.8);
+  }
+
+}  
+
+@media (max-width:800px) and (min-width: 700px) {
+    .nav-links{
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .nav-links li a{
+      font-size: 13px;
+    }
+  
+    .navbar{
+      padding: 20px 20px;
+    }
+  
+    .menubar{
+      display: none;
+    }
+  
+    .see_btn{
+      font-size: 14px;
+      font-weight: 200;
+    }
+  
+    .contact_btn{
+      font-size: 14px;
+      font-weight: 200;
+    }
+  
+    .btn_container{
+      width: 50%;
+    }
+  
+    .logo{
+      font-size: 25px;
+    }
+  
+    .container_h3{
+      font-size: 35px;
+    }
+  
+    .container h2{
+      font-size: 35px;
+    }
+
+    /* For benefits section  */
+
+    #benefit_sec{
+      height: auto;
+    }
+  
+    .benefit_sec_h1{
+      font-size: 30px;
+    }
+  
+    .center_div{
+      padding: 30px 0;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .icon_card_container{
+      display: inline-block;
+      margin: 10px 20px;
+    }
+  
+    .icon_card{
+      /* display: none; */
+      padding: 30px;
+      margin: 20px 0px;
+      box-sizing: border-box;
+      box-shadow: 1px 1px 8px 0px black;
+    }
+  
+    .icon_card img{
+      width: 65px;
+      height: 65px;
+    }
+  
+    .description h3{
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  
+    .description p{
+      font-size: 13px;
+    }
+  
+    #why_choose_sec{
+      height: auto;
+    }
+  
+    .why_choose_container{
+      display: inline-block;
+      padding: 0px;
+      width: 100%;
+    }
+  
+    .left_container{
+      width: auto;
+      height: 350px;
+      padding: 0px 20px;
+    }
+  
+    .left_container img{
+      border-radius: 0px;
+      height: 100%;
+    }
+  
+    .right_container{
+      /* display: none; */
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .right_container_h1{
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  
+    .reason_container{
+      /* display: inline-block; */
+      padding: 0px;
+      margin-top: 0px;
+    }
+  
+    .reason{
+      padding: 20px 15px;
+      border-radius: 7px;
+      border: 2px solid black;
+    }
+  
+    .reason h3{
+      font-size: 18px;
+    }
+  
+    .reason p{
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 0px;
+    }
+  
+    .status_div{
+      padding: 0px 30px;
+    }
+  
+    .status_container{
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 5px;
+      background-color: #2a3c4d;
+      color: white;
+      padding: 20px;
+    }
+  
+    .status{
+      font-size: 18px;
+      margin: 25px 0px;
+    }
+  
+    .status p{
+      font-size: 15px;
+    }
+  
+    .testimonial h2{
+      font-size: 35px;
+    }
+  
+    .testimonial h5{
+      font-size: 10px;
+    }
+  
+    .profile_card_container{
+      display: inline-block;
+      padding: 0px;
+      width: 100%;
+    }
+  
+    .profile_card{
+      width: 100%;
+      padding: 20px 150px;
+    }
+  
+    .profile_img_container{
+      width: 200px;
+      height: 200px;
+    }
+  
+    .profile_img_container img{
+      width: 180px;
+      height: 180px;
+    }
+
+
+}  
+
+@media (max-width:1400px) and (min-width:800px) {
+    .nav-links li a{
+      font-size: 16px;
+    }
+  
+    .nav-links li{
+      margin-left: 0px;
+      margin-right: 20px;
+    }
+  
+    .navbar{
+      padding: 20px 40px;
+    }
+  
+    .menubar{
+      display: none;
+    }
+  
+    .see_btn{
+      font-size: 14px;
+      font-weight: 200;
+    }
+  
+    .contact_btn{
+      font-size: 14px;
+      font-weight: 200;
+    }
+  
+    .btn_container{
+      width: 50%;
+    }
+  
+    .logo{
+      font-size: 25px;
+    }
+  
+    .container_h3{
+      font-size: 35px;
+    }
+  
+    .container h2{
+      font-size: 35px;
+    }
+
+        /* For benefits section  */
+
+    #benefit_sec{
+      height: auto;
+    }
+  
+    .center_div{
+      width: 100%;
+      text-align: center;
+    }
+  
+    .icon_card_container{
+      display: inline-block;
+      margin: 10px 20px;
+    }
+  
+    .icon_card{
+      /* display: none; */
+      padding: 30px;
+      margin: 20px 0px;
+      box-sizing: border-box;
+      box-shadow: 1px 1px 8px 0px black;
+    }
+  
+    .icon_card img{
+      width: 65px;
+      height: 65px;
+    }
+  
+    .description h3{
+      font-size: 18px;
+      margin-top: 10px;
+    }
+  
+    .description p{
+      font-size: 13px;
+    }
+  
+    #why_choose_sec{
+      height: auto;
+    }
+  
+    .why_choose_container{
+      display: inline-block;
+      padding: 0px;
+      width: 100%;
+    }
+  
+    .left_container{
+      width: auto;
+      height: 350px;
+      padding: 0px 20px;
+    }
+  
+    .left_container img{
+      border-radius: 0px;
+      height: 100%;
+    }
+  
+    .right_container{
+      /* display: none; */
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .right_container_h1{
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  
+    .reason_container{
+      /* display: inline-block; */
+      padding: 0px;
+      margin-top: 0px;
+    }
+  
+    .reason{
+      padding: 20px 15px;
+      border-radius: 7px;
+      border: 2px solid black;
+    }
+  
+    .reason h3{
+      font-size: 18px;
+    }
+  
+    .reason p{
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 0px;
+    }
+  
+    .status_div{
+      padding: 0px 30px;
+    }
+  
+    .status_container{
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 5px;
+      background-color: #2a3c4d;
+      color: white;
+      padding: 20px;
+    }
+  
+    .status{
+      font-size: 18px;
+      margin: 25px 0px;
+    }
+  
+    .status p{
+      font-size: 15px;
+    }
+  
+    .testimonial h2{
+      font-size: 35px;
+    }
+  
+    .testimonial h5{
+      font-size: 10px;
+    }
+  
+    .profile_card_container{
+      display: inline-block;
+      padding: 0px;
+      width: 100%;
+    }
+  
+    .profile_card{
+      width: 100%;
+      padding: 20px 150px;
+    }
+  
+    .profile_img_container{
+      width: 200px;
+      height: 200px;
+    }
+  
+    .profile_img_container img{
+      width: 180px;
+      height: 180px;
+    }
+
+
+}  
+  
+  
